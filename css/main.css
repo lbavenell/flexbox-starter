@@ -11,9 +11,9 @@
    ========================================================================== */
 
 html {
-    color: #222;
+    color: #F4E4E4;
     font-size: 1em;
-    line-height: 1.4;
+    line-height: 2em;
 }
 
 /*
@@ -96,77 +96,76 @@ textarea {
    ========================================================================== */
 
 html {
-  background-color: #fff;
+  background-color: #262626;
   height: 100%;
   width: 100%;
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Comic Neue', cursive;
+  justify-content: center;
   padding: 0 2em;
+  font-size: 1em;
+  display: flex;
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+}
+
+p span {
   font-size: 1.25em;
-  height: 100%;
-  color: #fff;
 }
 
 header,
 footer {
-  background-color: #222;
-  height: 80px;
   width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+header h1 {
+  font-size: 2.5em;
 }
 
 main {
-  background-color: #ccc;
-  height: 250px;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #000;
+}
+
+main p {
+  font-size: 2em;
+}
+
+.flex-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5em;
+  font-size: 1.75em;
 }
 
 header,
 footer,
 main {
   /*set display to flex and vertically & horizontally align by setting justify-content and align-items to center*/
+  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content:  flex-start;
 }
 
-#div-1,
-#div-2,
-#div-3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  line-height: 1.5em;
-  font-size: 1.25em;
-  height: auto;
+
+footer {
+  border-top: 1px solid #000;
 }
 
-.wrapper span {
-  font-family: 'Lora', sans-serif;
-  font-size: 1.3em;
-}
-
-.flex-container {
-  /*set display to flex and vertically & horizontally align by setting justify-content and align-items to center, and set flex-flow to row wrap*/
-  display: flex;
-  justify-content:space-between;
-  align-items: center;
-  flex-flow: row wrap;
-}
-
-.flex-items {
-  /*set display to flex and vertically & horizontally align by setting justify-content and align-items to center*/
-  color: #fff;
-  line-height: 1.5em;
-  font-size: 1.6em;
-  background-color: #f16059;
-  width: 30%;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+footer i {
+  padding: 30px 20px 0 0;
 }
 
 /* ==========================================================================
@@ -256,14 +255,15 @@ main {
 }
 
 @media (min-width: 1200px) {
-  #div-1,
-  #div-2{
-      /* set your flex value to 1 50% */
-  }
+  .flex-items {
+    flex-basis: 30%;
+    border-bottom: none;
+}
 
-  #div-3 {
-    /* set your flex value to 1 100% */
-  }
+  #div-2 p {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    padding: 0 40px;
 }
 
 @media print,
